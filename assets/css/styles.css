@@ -292,7 +292,7 @@ main {
 
 .hero-subtitle {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-accent-hover);
   margin-bottom: var(--spacing-lg);
 }
@@ -305,12 +305,6 @@ main {
   line-height: 1.7;
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-xl);
-}
-
-@media (min-width: 640px) {
-  .hero-title {
-    font-size: 3rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -406,6 +400,10 @@ main {
   border: none;
   white-space: nowrap;
   box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  scale: 1.01;
 }
 
 .btn:active {
@@ -581,6 +579,7 @@ main {
   font-size: 0.9rem;
   line-height: 1.5rem;
   flex-grow: 1;
+  margin-top: var(--spacing-xs);
 }
 
 .clickable-card-link {
@@ -832,11 +831,11 @@ main {
 }
 
 #flashback-hero {
-  background-image: linear-gradient(rgba(31, 27, 36, 0.7), rgba(31, 27, 36, 0.95)), url('/assets/images/flashback/hero_banner.png');
+  background-image: linear-gradient(rgba(31, 27, 36, 0.5), rgba(31, 27, 36, 0.9)), url('/assets/images/flashback/hero_banner.png');
 }
 
 #dueling-dragons-hero {
-  background-image: linear-gradient(rgba(31, 27, 36, 0.7), rgba(31, 27, 36, 0.95)), url('/assets/images/dueling_dragons/dueling_dragons.png');
+  background-image: linear-gradient(rgba(31, 27, 36, 0.5), rgba(31, 27, 36, 0.9)), url('/assets/images/dueling_dragons/Banner.png');
 }
 
 .project-title {
@@ -1030,20 +1029,15 @@ main {
   color: var(--color-accent);
 }
 
+.nearest-neighbor {
+  image-rendering: pixelated !important;
+}
+
 /*
 =================================================================
   ARCHIVE PAGE STYLES
 =================================================================
-*/
-.archive-hero {
-  padding-top: var(--spacing-4xl);
-  padding-bottom: var(--spacing-4xl);
-  text-align: center;
-  background-color: var(--color-bg-secondary);
-  background-image: linear-gradient(rgba(31, 27, 36, 0.1), rgba(31, 27, 36, 0.95));
-}
-
-.archive-grid-full {
+*/.archive-grid-full {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-md);
