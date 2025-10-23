@@ -838,6 +838,22 @@ main {
   background-image: linear-gradient(rgba(31, 27, 36, 0.5), rgba(31, 27, 36, 0.9)), url('/assets/images/dueling_dragons/Banner.png');
 }
 
+#pulsar-hero {
+  background-image: linear-gradient(rgba(31, 27, 36, 0.5), rgba(31, 27, 36, 0.9)), url('/assets/images/pulsar/CoverImage.png');
+}
+
+#earprint-hero {
+  background-image: linear-gradient(rgba(31, 27, 36, 0.5), rgba(31, 27, 36, 0.9)), url('/assets/images/earprint/Bench-Mockup.png');
+}
+
+#vct-hero {
+  background-image: linear-gradient(rgba(31, 27, 36, 0.5), rgba(31, 27, 36, 0.9)), url('/assets/images/vct_2023/Banner.png');
+}
+
+#f3-hero {
+  background-image: linear-gradient(rgba(31, 27, 36, 0.5), rgba(31, 27, 36, 0.9)), url('/assets/images/f3/Banner.png');
+}
+
 .project-title {
   text-align: center;
   font-size: 2rem;
@@ -927,6 +943,17 @@ main {
   line-height: 1.5;
 }
 
+.project-meta-link {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  transition: all var(--transition-base)
+}
+
+.project-meta-link:hover {
+  color: var(--color-text-light);
+  cursor: pointer;
+}
+
 .project-content h2 {
   font-size: 1.75rem;
   font-weight: 600;
@@ -997,12 +1024,50 @@ main {
   }
 }
 
+.gallery-grid-wide {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-2xl);
+}
+
 .gallery-grid img {
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius-sm);
   width: 100%;
   height: auto;
   transition: transform var(--transition-slow);
+}
+
+.gallery-grid img.short {
+  max-height: 300px;
+  width: auto;
+}
+
+.gallery-grid-masonry {
+  column-count: 1;
+  column-gap: var(--spacing-sm);
+  margin-top: var(--spacing-2xl);
+}
+
+@media (min-width: 768px) {
+  .gallery-grid-masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid-masonry {
+    column-count: 3;
+  }
+}
+
+.gallery-grid-masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: transform var(--transition-slow);
+  break-inside: avoid;
 }
 
 .project-nav {
